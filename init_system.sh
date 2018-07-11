@@ -64,10 +64,10 @@ LogLevel VERBOSE
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin no
 #StrictModes yes
 #MaxAuthTries 6
-#MaxSessions 10
+MaxSessions 3
 
 PubkeyAuthentication yes
 
