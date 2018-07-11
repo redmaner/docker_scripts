@@ -146,3 +146,8 @@ Subsystem	sftp	/usr/lib/ssh/sftp-server
 EOF
 
 systemctl restart sshd
+
+echo -e "\n${txtblu}Please add $user to sudoers in 5 seconds${txtrst}"
+sleep 5
+export EDITOR=vim
+visudo
