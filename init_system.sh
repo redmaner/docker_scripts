@@ -147,7 +147,13 @@ EOF
 
 systemctl restart sshd
 
+cp -r /root/.ssh /home/$user/.ssh
+chown -R $user:$user /home/$user/.ssh
+chmod -R 750 /home/$user/.ssh
+
 echo -e "\n${txtblu}Please add $user to sudoers in 5 seconds${txtrst}"
 sleep 5
 export EDITOR=vim
 visudo
+
+
