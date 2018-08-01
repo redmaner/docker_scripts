@@ -1,7 +1,6 @@
 #!/bin/bash
 
 user=ddkube
-compose_v=1.21.2
 
 # Colors
 txtrst='\e[0m' # Color off
@@ -48,10 +47,6 @@ apt-get update
 apt-get install -y docker-ce
 systemctl start docker
 systemctl enable docker
-
-echo -e "\n${txtblu}Installing docker-compose${txtrst}"
-curl -L https://github.com/docker/compose/releases/download/$compose_v/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
 
 echo -e "\n${txtblu}Installing kubeadm, kubelet and kubectl${txtrst}"
 apt-get update && apt-get install -y apt-transport-https curl
