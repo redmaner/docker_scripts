@@ -1,7 +1,7 @@
 #!/bin/bash
 
-user=ddswarm
-compose_v=1.21.2
+user=jake
+compose_v=1.22.0
 
 # Colors
 txtrst='\e[0m' # Color off
@@ -16,11 +16,11 @@ userdel debian
 echo -e "\n${txtblu}Please enter the password for the root user${txtrst}"
 passwd
 
-# Create user ddswarm
+# Create user
 echo -e "\n${txtblu}Creating new user${txtrst}: $user"
 useradd -m -s /bin/bash $user
 
-# Creat user password for ddswarm
+# Creat user password 
 echo -e "\n${txtblu}Pleas enter password${txtrst}: $user"
 passwd $user
 
