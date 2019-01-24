@@ -9,9 +9,6 @@ txtblu='\e[1;36m' # Blue
 # Do some cleaning
 echo -e "\n${txtblu}Cleaning up some stuff${txtrst}"
 echo > /etc/motd
-userdel debian
-
-sudo su
 
 # Password for root
 echo -e "\n${txtblu}Please enter the password for the root user${txtrst}"
